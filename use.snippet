@@ -3,6 +3,8 @@
 	 * ${0:变量注释}
 	 */
 	const r$CURRENT_SECONDS_UNIX = await(() => {
-		const p1 = $1;	// 参数注释
-		return aw6(p1);
+		const selector = '[data-mm-id="$1"]';	// form节点的选择器  例如：id:#xxx 自定义标识:[data-id="xxx"] html标签:'div' 选择器不唯一,默认选择第一个
+		const service_name = '$2';	// 服务名（路径）
+		const ext = {$3};	// 提交需要附加的form外数据,例如一些非表单元素的控件的结果 注意：对象内的key和value值必须为string
+		return aw6<$4>(mm, selector, service_name, ext);
 	})();
