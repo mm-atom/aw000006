@@ -1,6 +1,6 @@
 {
 	"name": "@mmstudio/aw000006",
-	"version": "1.0.202003131748",
+	"version": "1.0.202003171141",
 	"description": "form表单提交",
 	"scripts": {
 		"test": "npm run build && karma start --single-run",
