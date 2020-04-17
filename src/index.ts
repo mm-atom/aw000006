@@ -1,7 +1,7 @@
 import aw1 from '@mmstudio/aw000001';
 import global from '@mmstudio/global';
 
-export default function upload<T>(mm: aw1, selector: string, service_name: string, ext: { [key: string]: string }) {
+export default function submit<T>(mm: aw1, selector: string, service_name: string, ext: { [key: string]: string }) {
 	return new Promise<T>((resolve, reject) => {
 		const url = `${global('host', '.')}/sendmessage/${encodeURIComponent(service_name)}`;
 		const form = mm.data.node.querySelector<HTMLFormElement>(selector)!;
