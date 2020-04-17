@@ -24,6 +24,7 @@ export default function submit<T>(mm: aw1, selector: string, service_name: strin
 			form_data.append(key, val);
 		});
 		const request = new XMLHttpRequest();
+		request.withCredentials = true;
 		request.onload = () => {
 			if (request.status === 200) {
 				resolve(JSON.parse(request.responseText) as T);
